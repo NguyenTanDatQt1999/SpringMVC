@@ -9,8 +9,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<spring:url value="/FileUpload/images" var="images" />
 	<h1>${filename }</h1>
-	<img src="<%=request.getContextPath()%>/images/${filename }">
+	<img src="${pageContext.request.contextPath}/images/${filename }"/>
 </body>
 </html>
