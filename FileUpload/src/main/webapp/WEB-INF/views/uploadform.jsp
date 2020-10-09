@@ -9,7 +9,7 @@
 </head>
 <body>
 	<h1>File Upload Example</h1>
-	<form:form method="post" action="savefile" enctype="multupart/form-data">
+	<form:form method="post" action="savefile" enctype="multipart/form-data">
 		<p><label for="image">Choose Image</label>
 		<p><input name="file", id="fileToUpload" type="file">
 		<p><input type="submit" value="Upload">
