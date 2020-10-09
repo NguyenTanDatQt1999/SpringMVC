@@ -21,7 +21,6 @@
 	Female <form:radiobutton path="Gender" value="Female" />
 		<br>
 		<br>
-		<input type="submit" value="Submit">
 	Meals:
 	BreakFast: <form:checkbox path="Food" value="BreakFast" />
 	Lunch: <form:checkbox path="Food" value="Lunch" />
