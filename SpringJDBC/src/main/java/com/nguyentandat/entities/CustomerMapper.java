@@ -10,7 +10,7 @@ public class CustomerMapper implements RowMapper<Customer>{
 		Customer customer=new Customer();
 		customer.setId(rs.getInt("id"));
 		customer.setName(rs.getString("name"));
-		customer.setAddress(rs.getString("address"));
+		customer.setAddress(rs.getString("adress"));
 		return customer;
 	}
 }

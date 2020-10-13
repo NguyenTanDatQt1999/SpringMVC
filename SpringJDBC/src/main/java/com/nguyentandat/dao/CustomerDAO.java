@@ -17,7 +17,7 @@ public class CustomerDAO {
 	@Autowired
 	private JdbcTemplate jdbcTemplate;
 	public void save(Customer customer){
-		String sql="INSERT INTO customer(name,address) VALUES(?,?)";
+		String sql="INSERT INTO customer(name,adress) VALUES(?,?)";
 		jdbcTemplate.update(sql,customer.getName(), customer.getAddress());
 	}
 	public void delete(int id){
@@ -25,7 +25,7 @@ public class CustomerDAO {
 		jdbcTemplate.update(sql);
 	}
 	public void update(Customer customer){
-		String sql="UPDATE customer SET name=?, address=?, WHERE id=?";
+		String sql="UPDATE customer SET name=?, adress=?, WHERE id=?";
 		jdbcTemplate.update(sql, customer.getName(), customer.getAddress(), customer.getId());
 	}
 	public Customer findById(int id){

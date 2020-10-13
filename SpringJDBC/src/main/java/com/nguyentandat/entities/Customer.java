@@ -2,8 +2,9 @@ package com.nguyentandat.entities;
 
 public class Customer {
 	private int id;
-	private String address;
 	private String name;
+	private String adress;
+	
 	public Customer(){
 		
 	}
@@ -18,19 +19,10 @@ public class Customer {
 	}
 	@Override
 	public String toString(){
-		return "Customer [id="+getId()+",name="+getName()+",address="+getAddress()+"]";
+		return "Customer [id="+getId()+",name="+getName()+",adress="+getAddress()+"]";
 	}
 	public int getId() {
 		return id;
-	}
-	public void setId(int id) {
-		this.id = id;
-	}
-	public String getAddress() {
-		return address;
-	}
-	public void setAddress(String address) {
-		this.address = address;
 	}
 	public String getName() {
 		return name;
@@ -38,5 +30,15 @@ public class Customer {
 	public void setName(String name) {
 		this.name = name;
 	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getAddress() {
+		return adress;
+	}
+	public void setAddress(String address) {
+		this.adress = address;
+	}
+	
 	
 }
