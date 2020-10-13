@@ -17,8 +17,9 @@ First Name: ${reservation.firstName }
 	Gender: ${reservation.gender }<br>
 	Meals:
 	<ul>
-		<c:forEach var="meal" item="${reservation.food }">
-		<li>${meal }</li>
+	<li>${reservation.food }</li>
+		<c:forEach items="${reservation.food }" var="meal" varStatus="loop">
+		<li> <c:out value="[${loop.index}]" />: <c:out value="${meal }" /></li>
 		</c:forEach>
 	</ul>
 	Leaving From: ${reservation.cityFrom}<br>

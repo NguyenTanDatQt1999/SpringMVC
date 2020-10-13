@@ -32,7 +32,7 @@ public class Reservation {
 		return Food;
 	}
 	public void setFood(String[] food) {
-		Food = food;
+		this.Food = food;
 	}
 	public String getCityFrom() {
 		return cityFrom;
