@@ -41,13 +41,13 @@ public class CustomerController {
 	public String doSaveCustomer(@ModelAttribute("Customer") Customer customer, Model model){
 		customerService.save(customer);
 		model.addAttribute("listCustomer", customerService.findAll());
-		return "customer-update";
+		return "customer-list";
 	}
 	@RequestMapping(value={"/updateCustomer"})
 	public String doUpdateCustomer(@ModelAttribute("Customer") Customer customer, Model model){
 		customerService.update(customer);
 		model.addAttribute("listCustomer", customerService.findAll());
-		return "customer-update";
+		return "customer-list";
 	}
 	@RequestMapping(value={"/customerDelete/{id}"})
 	public String doDeleteCustomer(@PathVariable int id, Model model){

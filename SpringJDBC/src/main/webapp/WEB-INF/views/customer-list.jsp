@@ -1,9 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+<%@ page isELIgnored="false" %> 
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Hello Spring MVC + JDBC</title>
 <style>
@@ -33,7 +34,7 @@ td{
 			<th>Delete</th>
 		</tr>
 		<c:if test="${not empty listCustomer }">
-			<c:foreach var="customer" items="${listCustomer }">
+			<c:forEach items="${listCustomer }" var="customer" >
 				<tr style="border:1px solid black">
 					<td>${customer.id }</td>
 					<td>${customer.name }</td>
@@ -42,7 +43,7 @@ td{
 					<td><a href="${urlUpdate }/${customer.id}">Edit</a></td>
 					<td><a href="${urlDelete }/${customer.id}">Delete</a></td>
 				</tr>
-			</c:foreach>
+			</c:forEach>
 		</c:if>
 	</table>
 </body>

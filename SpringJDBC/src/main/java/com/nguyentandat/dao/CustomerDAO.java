@@ -2,11 +2,12 @@ package com.nguyentandat.dao;
 
 import java.util.List;
 
-import javax.transaction.Transactional;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.nguyentandat.entities.Customer;
 import com.nguyentandat.entities.CustomerMapper;
@@ -25,8 +26,8 @@ public class CustomerDAO {
 		jdbcTemplate.update(sql);
 	}
 	public void update(Customer customer){
-		String sql="UPDATE customer SET name=?, adress=?, WHERE id=?";
-		jdbcTemplate.update(sql, customer.getName(), customer.getAddress(), customer.getId());
+		String sql="UPDATE customer SET name=?, adress=? WHERE id=?";
+		jdbcTemplate.update(sql, customer.getName(), customer.getAddress(),customer.getId());
 	}
 	public Customer findById(int id){
 		String sql= "SELECT * FROM customer WHERE id=?";
